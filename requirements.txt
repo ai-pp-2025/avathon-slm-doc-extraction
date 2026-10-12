@@ -1,0 +1,10 @@
+# Python >= 3.10 (developed against Colab's default Python 3.12).
+# Lower bounds only: Colab ships newer torch/transformers. The exact versions of a run are captured by the
+# env-freeze cell in notebooks/train_colab.ipynb -> results/env_freeze.txt. Treat that file as the lock.
+torch>=2.3
+transformers>=4.51        # first release with Qwen3 support
+peft>=0.15
+accelerate>=0.30
+datasets>=2.19
+bitsandbytes>=0.43; sys_platform == "linux"   # QLoRA / 4-bit inference (CUDA only)
+pytest>=8
