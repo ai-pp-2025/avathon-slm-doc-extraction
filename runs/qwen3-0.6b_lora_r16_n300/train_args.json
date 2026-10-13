@@ -1,0 +1,18 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "data_dir": "data/processed",
+  "out": "runs/qwen3-0.6b_lora_r16_n300",
+  "epochs": 3,
+  "lr": 0.0002,
+  "batch_size": 4,
+  "grad_accum": 8,
+  "rank": 16,
+  "alpha": null,
+  "dropout": 0.05,
+  "targets": "all",
+  "qlora": false,
+  "grad_ckpt": true,
+  "text_budget": 800,
+  "max_train_samples": 300,
+  "seed": 42
+}

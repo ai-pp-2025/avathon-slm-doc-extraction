@@ -1,0 +1,14 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "n_train": 300,
+  "n_val": 75,
+  "trainable_params": 10092544,
+  "total_params": 606142464,
+  "trainable_pct": 1.665,
+  "adapter_mb": 38.5,
+  "train_seconds": 1177.0,
+  "train_loss": 0.09420697788397471,
+  "best_val_loss": 0.02458537369966507,
+  "peak_gpu_gb": 7.43,
+  "gpu": "Tesla T4"
+}
