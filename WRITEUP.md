@@ -45,13 +45,24 @@ Test set, n=361 (95% interval about ±3.4 points at 88%, ±7.7 on the unseen sub
 | qwen3-0.6b_zeroshot | 361 | 100.0% | 66.8% | 87.2% | 63.7% | 80.9% | 37.1% | 32.0% | 8.0% | 2.8% | 902 |
 | regex | 361 | 100.0% | 64.0% | 90.7% | 95.0% | 71.7% | 46.5% | 35.2% | 0.0% | 2.8% | 0 |
 
+#### All Sorted Results
 ![Sorted Results](<Screenshot 2026-10-15 at 9.53.47 AM.png>)
+
+#### Solution Comparison
+![alt text](<Solution Comparison.png>)
 
 "Ungrounded" = a predicted value that does not occur in the receipt text (hallucination proxy). The same check on the gold labels flags 2.8%, the noise floor.
 
-**Qualitative (receipt X51005447842; gold date 14/03/2018, total 0.90).** Zero-shot: `"date": "016-5498845", "total": 5.00` (a phone number as the date, the subtotal as the total). 3-shot: right date, total 5.00. Tuned: `{"company": "PASARAYA BORONG PINTAR SDN BHD", "date": "14/03/2018", "total": "0.90"}`. On X51005230648 zero-shot returns `"date": "29/01/2018 4:40:40 PM"`; tuned returns the bare date.
+**Qualitative (receipt X51005447842; gold date 14/03/2018, total 0.90).** 
+- Zero-shot: `"date": "016-5498845", "total": 5.00` (a phone number as the date, the subtotal as the total). 
+- 3-shot: right date, total 5.00. 
+- Tuned: `{"company": "PASARAYA BORONG PINTAR SDN BHD", "date": "14/03/2018", "total": "0.90"}`. 
 
-**Where it fails.** 43 of 361 receipts have at least one wrong field: company 24, total 15, date 6. Ten of the 43 involve a gold label that is not in the OCR text, so some errors are label noise (for example gold "TED HENG STATIONERY" where the text says "TEO HENG"). Thirty-three of the 43 are on unseen merchants. Typical genuine errors: wrong entity ("SIMPLIFIED TAX INVOICE" taken as company), suffix mismatches ("S/B" or "666" dropped), totals off by rounding (7.40 vs 7.42) or taken from the wrong "TOTAL" line (263.02 vs 278.80), and dates with a wrong digit or a date range.
+**Where it fails.** 
+- 43 of 361 receipts have at least one wrong field: company 24, total 15, date 6. 
+- Ten of the 43 involve a gold label that is not in the OCR text, so some errors are label noise (for example gold "TED HENG STATIONERY" where the text says "TEO HENG"). 
+- Thirty-three of the 43 are on unseen merchants. 
+- Typical genuine errors: wrong entity ("SIMPLIFIED TAX INVOICE" taken as company), suffix mismatches ("S/B" or "666" dropped), totals off by rounding (7.40 vs 7.42) or taken from the wrong "TOTAL" line (263.02 vs 278.80), and dates with a wrong digit or a date range.
 
 ## 4. Production and limitations
 
