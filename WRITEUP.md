@@ -44,6 +44,7 @@ Test set, n=361 (95% interval about ±3.4 points at 88%, ±7.7 on the unseen sub
 | qwen3-0.6b_zeroshot | 361 | 100.0% | 66.8% | 87.2% | 63.7% | 80.9% | 37.1% | 32.0% | 8.0% | 2.8% | 902 |
 | regex | 361 | 100.0% | 64.0% | 90.7% | 95.0% | 71.7% | 46.5% | 35.2% | 0.0% | 2.8% | 0 |
 
+![Sorted Results](<Screenshot 2026-10-15 at 9.53.47 AM.png>)
 
 "Ungrounded" = a predicted value that does not occur in the receipt text (hallucination proxy). The same check on the gold labels flags 2.8%, the noise floor.
 
