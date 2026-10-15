@@ -106,11 +106,3 @@ ms/receipt is not comparable across rows (batch size 8, or 4 for the 3-shot run)
 Final run cost on a Colab T4: 35 min, 7.4 GB peak GPU memory, 10.1M trainable parameters (1.7%), 38.5 MB adapter.
 Not run: catastrophic-forgetting probe, larger prompted model, other base models, full fine-tuning.
 Interpretation and error analysis are in `WRITEUP.md`.
-
-## Submission checklist
-
-- [x] Results table above filled in
-- [ ] `WRITEUP.md` exported to PDF (name + track B at the top, 11 pt)
-- [ ] Video link (5 min max): problem and approach 1 min, decisions and what was ruled out 2 min, results and failures 1.5 min, next steps 0.5 min
-- [ ] Iterative commit history (data, baselines, training, ablations, write-up as separate commits)
-- [x] `results/env_freeze.txt` committed
