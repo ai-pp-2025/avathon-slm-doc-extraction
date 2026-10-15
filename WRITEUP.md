@@ -49,7 +49,7 @@ Test set, n=361 (95% interval about ±3.4 points at 88%, ±7.7 on the unseen sub
 ![Sorted Results](<Screenshot 2026-10-15 at 9.53.47 AM.png>)
 
 #### Solution Comparison
-![alt text](<Solution Comparison.png>)
+![alt text](<SolutionComparison.png>)
 
 "Ungrounded" = a predicted value that does not occur in the receipt text (hallucination proxy). The same check on the gold labels flags 2.8%, the noise floor.
 
