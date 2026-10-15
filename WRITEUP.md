@@ -4,6 +4,7 @@
 Repo: github.com/ai-pp-2025/avathon-slm-doc-extraction | All numbers: `results/summary.md`, `runs/*/run_info.json`
 
 ## 1. Problem and domain
+![Problem Statement](problem_image.png)
 
 **Problem.** Accounts-payable and expense teams receive receipts as noisy OCR text and need `company`, `date` and `total` as structured fields. Rules break on layout variety (several "TOTAL" lines, many date formats), and a hosted LLM API adds per-document cost and sends financial documents outside the company. A 0.6B model that runs in-house is the target.
 
